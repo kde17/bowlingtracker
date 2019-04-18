@@ -1,0 +1,96 @@
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+import java.util.Arrays;
+public class GameTracker {
+
+	public static void main(String[] args) {
+		
+		// Ask for platers names
+		String player1 = "";
+		String player2 = "";
+		Scanner in = new Scanner(System.in);
+		int frame = 1;
+		int score1 = 0;
+		int scorre2 = 0;
+		
+		int attempt1 = 0;
+		int attempt2 = 0;
+		
+		int total1 = 0;
+		int total = 0;
+		final int MAX_FRAMES = 11;
+		final int MAX_PINS = 10;
+		
+		player1 = JOptionPane.showInputDialog(" Enter your player's name: ");
+			
+		
+	
+		int[] attempt1P1 = new int[25];
+		int[] attempt1P2 = new int[25];
+		int[] attempt2P1 = new int[25];
+		
+		int[] points2 = new int[25];
+		 
+		
+		
+	
+		for ( int i = 1; i % 2 != 0 ; i++ ) {
+		System.out.println( "Frame"+ frame +" Enter Score for " + player1 + "'s first throw: ");
+		attempt1P1[i] = in.nextInt();
+		
+		
+		if ( attempt1P1[i] == 10) {
+			System.out.println(" STRIKE!");
+			total1 +=
+			i++;
+			frame++;
+			
+			
+			
+		
+		}
+		
+		
+		if( i % 2 != 0) {
+			System.out.println("Frame " + frame +" Enter Score for " + player1 + "'s second throw: ");
+			attempt2P1[i] = in.nextInt();
+			i++;
+			frame++;	
+			
+			if( frame == MAX_FRAMES) {
+				break;
+			}
+		}
+		
+		
+		}
+		
+		
+		
+		
+		for (double element : attempt1P1) {
+			total1 += element + score1;
+		}
+		for (double element : attempt2P1) {
+			total1 += element;
+		}
+		
+		System.out.println( player1 + "'s score is " + total);
+		
+	
+		
+		
+	
+	}
+	
+	
+	
+	
+	
+	
+	}
+	
+			
+	
+
+
